@@ -30,5 +30,5 @@ Installation facile à mettre en place et économique.
 
 -Production de recommandations et de rapports.
 
--Système d’aide à![ajout](https://user-images.githubusercontent.com/58324513/136006257-12c54385-c143-425e-b91d-0bb0ad57802e.PNG)
- la décision.
+-Système d’aide à la décision.
+![ajout](https://user-images.githubusercontent.com/58324513/136006257-12c54385-c143-425e-b91d-0bb0ad57802e.PNG)
