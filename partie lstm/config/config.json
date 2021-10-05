@@ -1,0 +1,7 @@
+{
+    "model_config": {
+        "model_path": "models/prediction.h5",
+        "scaler_path": "models/scaler.pkl",
+        "scaler_pathY": "models/scalerY.pkl"
+    }
+}

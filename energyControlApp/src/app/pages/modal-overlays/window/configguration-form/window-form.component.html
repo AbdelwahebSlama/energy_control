@@ -1,0 +1,136 @@
+<div style="width: 100%">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <nb-card-header>Haute consommation</nb-card-header>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label  class="label">Attenttion</label>
+              <input type="number" nbInput fullWidth
+                     class="status-warning  alert-warning"  formControlName="high_alarm" >
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label  class="label">Danger</label>
+              <input type="number" nbInput fullWidth   formControlName="low_alarm"
+                     class="status-danger alert-danger">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <nb-card-header>Bas consommation</nb-card-header>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="label">Attenttion</label>
+              <input type="number" nbInput fullWidth
+                     class="status-warning alert-warning"  formControlName="low_warning">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label  class="label">Danger</label>
+              <input type="number" nbInput fullWidth
+                     class="status-danger alert-danger" formControlName="high_warning">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+<!--    <div class="row">-->
+
+<!--      <div class="col-md-6">-->
+
+<!--        <nb-card-header>Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nb-card-header>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <div class="row">-->
+<!--          <div class="">-->
+<!--            <div class="form-group">-->
+<!--              <label for="freedate" class="label">Choisir Date</label>-->
+<!--              <input type="date" nbInput fullWidth id="freedate" placeholder="" formControlName="freedate" >-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="col-md-6">-->
+<!--        <nb-card-header>Weekend&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nb-card-header>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <div class="row">-->
+<!--          <div class="form-group">-->
+<!--            <label for="" class="label">selectionner le jour férié</label>-->
+<!--            <div class="demo-items">-->
+<!--              <nb-checkbox formControlName="samidi">Samdi</nb-checkbox>&nbsp;&nbsp;&nbsp;-->
+<!--              <nb-checkbox  formControlName="dimanche" checked>Dimanche</nb-checkbox>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--    </div>-->
+
+<!--    <div class="row">-->
+
+<!--      <div class="col-md-6">-->
+
+<!--        <nb-card-header>Heur d'activation&nbsp;&nbsp;&nbsp;&nbsp;</nb-card-header>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <div class="row">-->
+<!--          <div class="col-md-6">-->
+<!--            <div class="form-group">-->
+<!--              <label for="" class="label">Debut</label>-->
+<!--              <br>-->
+<!--              <nb-select selected="1"  >-->
+<!--                <nb-option *ngFor="let item of interval" value="{{item}}">{{item}}</nb-option>-->
+<!--                &lt;!&ndash;                  <nb-option value="2">Option 2</nb-option>&ndash;&gt;-->
+<!--              </nb-select>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-6">-->
+<!--            <div class="form-group">-->
+<!--              <label for="" class="label">Fin</label>-->
+<!--              <br>-->
+<!--              <nb-select selected="1">-->
+<!--                <nb-option *ngFor="let item of interval" value="{{item}}">{{item}}</nb-option>-->
+<!--              </nb-select>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="col-md-6">-->
+<!--        <nb-card-header>Temps avant démarage d'alarme</nb-card-header>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <div class="row">-->
+<!--          <div class="">-->
+<!--            <div class="form-group">-->
+<!--              <label for="" class="label">Durrée</label>-->
+<!--              <input type="number" nbInput fullWidth id="" placeholder="">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+    <br>
+    <button type="submit" class="btn btn-primary" nbButton >Submit</button>
+  </form>
+</div>
+
+

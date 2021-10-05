@@ -1,0 +1,143 @@
+<nb-card>
+  <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">
+    Configuration appareil
+  </nb-card-header>
+  <nb-card-body>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<!--      <div class="row">-->
+<!--        <div class="col-md-6">-->
+<!--          <nb-card-header>Numéro d'appareil</nb-card-header>-->
+<!--        </div>-->
+<!--        <div class="col-md-6">-->
+<!--          <div class="form-group">-->
+<!--            <nb-select selected="1" formControlName="id">-->
+<!--              <nb-option *ngFor="let item of listeDevice" value="{{item}}">{{item}}</nb-option>-->
+<!--            </nb-select>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <nb-card-header>Bas consommation</nb-card-header>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="label">Attenttion</label>
+                <input type="number" nbInput fullWidth
+                       class="status-warning alert-warning" formControlName="low_warning">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="label">Danger</label>
+                <input type="number" nbInput fullWidth
+                       class="status-danger alert-danger" formControlName="high_warning">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+
+          <nb-card-header>Haute consommation</nb-card-header>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="label">Attenttion</label>
+                <input type="number" nbInput fullWidth
+                       class="status-warning  alert-warning" formControlName="high_alarm">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="label">Danger</label>
+                <input type="number" nbInput fullWidth formControlName="low_alarm"
+                       class="status-danger alert-danger">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+          <div class="row">
+
+            <div class="col-md-6">
+
+              <nb-card-header>Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nb-card-header>
+              <br>
+              <br>
+              <div class="row">
+                <div class="">
+                  <div class="form-group">
+                    <label  class="label">Choisir Date</label>
+                    <input type="date" nbInput fullWidth placeholder="" formControlName="freedate"
+                           data-date-format="DD MMMM YYYY">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!--            <div class="col-md-6">-->
+<!--              <nb-card-header>Weekend&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nb-card-header>-->
+<!--              <br>-->
+<!--              <br>-->
+<!--              <div class="row">-->
+<!--                <div class="form-group">-->
+<!--                  <label  class="label">selectionner le jour férié</label>-->
+<!--                  <div class="demo-items">-->
+<!--                    <nb-checkbox formControlName="samdi">Samdi</nb-checkbox>&nbsp;&nbsp;&nbsp;-->
+<!--                    <nb-checkbox  formControlName="dimanche" checked>Dimanche</nb-checkbox>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+          </div>
+
+<!--          <div class="row">-->
+
+<!--            <div class="col-md-6">-->
+
+<!--              <nb-card-header>Heur d'activation&nbsp;&nbsp;&nbsp;&nbsp;</nb-card-header>-->
+<!--              <br>-->
+<!--              <br>-->
+<!--&lt;!&ndash;              <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="col-md-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label for="" class="label">Debut</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <nb-select selected="1"  formControlName="heureactivationdebut">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <nb-option *ngFor="let item of interval" value="{{item}}">{{item}}</nb-option>&ndash;&gt;-->
+<!--&lt;!&ndash;                      &lt;!&ndash;                  <nb-option value="2">Option 2</nb-option>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    </nb-select>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="col-md-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label for="" class="label">Fin</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <nb-select selected="1" formControlName="heureactivationfin">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <nb-option *ngFor="let item of interval" value="{{item}}">{{item}}</nb-option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </nb-select>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                &ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--              -->
+<!--            </div>-->
+<!--          </div>-->
+      <br>
+      <button type="submit" class="btn btn-primary" nbButton>Configurer</button>
+    </form>
+
+
+  </nb-card-body>
+</nb-card>

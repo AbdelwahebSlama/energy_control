@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">Predire votre consommation Par heure</nb-card-header>
+      <nb-card-body>
+        <p class="">
+          Ce service vous permet de predire votre consommation d'énergie en nombre d'heure.
+        </p>
+        <p class=""><b>Veuillez cliquer sur le boutton prevision:</b></p>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="cout" class="label">Nombre d'heure</label>
+              <input type="number" id="cout" name="cout" [(ngModel)]="nbrHeur" ngModel  class="form-control" >
+            </div>
+          </div>
+          <div class="pull-right">
+            <button type="submit" nbButton (click)="predict()">predire
+            </button>
+          </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">Predire votre facture Par Mois</nb-card-header>
+      <nb-card-body>
+        <p class="">
+          Ce service vous permet de predire le montant de votre facture d'électricité pour la prochaine mois en
+          tenant compte de votre ancien consommation d'énergie.
+        </p>
+        <p class=""><b>Veuillez cliquer sur le boutton prevision:</b></p>
+        <br>
+        <br>
+        <br>
+
+        <button nbButton (click)="predictMonth()">Predire</button>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+
+
+
+
+
+<nb-card>
+  <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">Liste de Prediction</nb-card-header>
+  <nb-card-body>
+    <div class="d-flex flex-row-reverse bd-highlight mb-2">
+      <div class="p-2 bd-highlight">
+        <div class="row">
+          <div>
+            <select (change)="onTableSizeChange($event)" class="custom-select">
+              <option *ngFor="let size of tableSizes" [ngValue]="size">
+                {{ size }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-row-reverse bd-highlight mb-2">
+      <div class="p-2 bd-highlight">
+      </div>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Date</th>
+        <th scope="col">prediction</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of predcitions | paginate : {
+                itemsPerPage: tableSize,
+                currentPage: page,
+                totalItems: count
+              };
+              let i = index" [class.active]="i == currentIndex">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.periode}}</td>
+        <td>{{item.prediction}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-center">
+      <pagination-controls
+        responsive="true"
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="onTableDataChange($event)">
+      </pagination-controls>
+    </div>
+    </nb-card-body>
+</nb-card>
+

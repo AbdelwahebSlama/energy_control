@@ -1,0 +1,38 @@
+<nb-card>
+  <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">Factures avec taux d'erreur 0.8%</nb-card-header>
+
+  <nb-card-body>
+    <div class="table-responsive-sm">
+      <table class="table table-striped">
+        <tr>
+          <td>Predicion de la prochaine facture par mois: </td>
+        </tr>
+        <tr bgcolor="#f0f8ff">
+          <td>Consommation en KWh</td>
+          <td>Coût en Dinars/KHw</td>
+          <td>Montant</td>
+        </tr>
+        <tr>
+          <td>{{prediction}}</td>
+          <td><input class="form-control"  type="number" value="0.5" ></td>
+          <td>120.000</td>
+        </tr>
+      </table>
+
+      <button class="btn btn-primary" (click)="addPrediction()">ok</button>
+    </div>
+  </nb-card-body>
+</nb-card>
+
+<nb-card *ngIf="isHour">
+  <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">Factures</nb-card-header>
+
+  <nb-card-body>
+    <div class="table-responsive-sm">
+
+      Predict Hour
+
+      <button class="btn btn-primary" (click)="addPrediction()">ok</button>
+    </div>
+  </nb-card-body>
+</nb-card>

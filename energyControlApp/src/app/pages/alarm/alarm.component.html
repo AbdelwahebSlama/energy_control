@@ -1,0 +1,36 @@
+<!--<div class="">-->
+
+<!-- -->
+<!--  <br>-->
+<!--  <br>-->
+
+<!--</div>-->
+
+<nb-card>
+  <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">
+    Histogramme
+  </nb-card-header>
+  <nb-card-body>
+    <highcharts-chart
+      [Highcharts]="highcharts"
+      [options]="chartOptions"
+      style="width: 100%; height: 400px; display: block;">
+    </highcharts-chart>
+  </nb-card-body>
+</nb-card>
+
+
+<div class="">
+  <nb-card>
+    <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">
+      Historiques Alarme
+    </nb-card-header>
+
+    <nb-card-body>
+      <ng2-smart-table
+        [settings]="settings" [source]="source">
+      </ng2-smart-table>
+    </nb-card-body>
+  </nb-card>
+</div>
+

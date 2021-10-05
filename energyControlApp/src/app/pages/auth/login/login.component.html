@@ -1,0 +1,81 @@
+<div class="py-5">
+  <div class="row ">
+    <div class="col-md-5 mx-auto">
+      <div id="first">
+        <div class="myform form ">
+          <div class="logo mb-3">
+            <div class="col-md-12 text-center">
+              <h1>Connectez-vous</h1>
+            </div>
+          </div>
+          <form #loginForm="ngForm" name="login">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                #emailControl="ngModel"
+                ngModel
+                required
+                minlength="4"
+                type="email" name="username" class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <div
+                *ngIf="!emailControl.valid&& emailControl.touched"
+                class="alert alert-danger"
+              >
+                Veuillez renseigner un email Valide.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Password</label>
+              <input
+                #pwdControl="ngModel"
+                ngModel
+                required
+                minlength="4"
+                type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp"
+                placeholder="Enter Password">
+              <div
+                *ngIf="!pwdControl.valid&& pwdControl.touched"
+                class="alert alert-danger">
+                La taille du passeword doit être d'au moins 4 caractères.
+              </div>
+            </div>
+            <div class="col-md-12 text-center ">
+              <button
+                [disabled]="loginForm.invalid"
+                (click)="login(loginForm)"
+                type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">
+                Connectez
+              </button>
+            </div>
+            <br  *ngIf="errorMessage.length">
+            <div
+              *ngIf="errorMessage.length"
+              div class="col-md-12 mb-3  alert alert-danger">
+              {{errorMessage}}
+            </div>
+            <!--            <div class="col-md-12 ">-->
+            <!--              <div class="login-or">-->
+            <!--                <hr class="hr-or">-->
+            <!--                <span class="span-or">or</span>-->
+            <!--              </div>-->
+            <!--            </div>-->
+            <!--            <div class="col-md-12 mb-3">-->
+            <!--              <p class="text-center">-->
+            <!--                <a-->
+            <!--                  routerLinkActive="active"-->
+            <!--                  [routerLink]="['registre']"-->
+            <!--                  (click)="creeCompte()"-->
+            <!--                  class="google btn mybtn"><i class="fa fa-google-plus">-->
+            <!--                </i> Créez une compte-->
+            <!--                </a>-->
+            <!--              </p>-->
+            <!--            </div>-->
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,11 @@
+<nb-card>
+  <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">
+    Historiques
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table
+      [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

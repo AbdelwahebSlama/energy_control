@@ -1,0 +1,89 @@
+<nb-card>
+  <nb-card-header style="background-color: #042c6d; color: #e4bc0c;">liste de Predictions de consommation par Heure avec taux d'erreur 0.8%
+
+  </nb-card-header>
+
+  <nb-card-body>
+    <div class="col-xl-6">
+      <h6 class="h-25"> Prediction de l'appariel 34:</h6>
+      <br>
+      <ol class="list-group list-group-numbered">
+
+        <li class="list-group-item d-flex justify-content-between align-items-start"
+            *ngFor="let t of lisprediction34 ; let index = index">
+          <div class="ms-2 me-auto">
+            prediction de l'heure {{ index + 1}} : {{t}} KWh
+          </div>
+          <span class="badge bg-primary rounded-pill">± {{ (t * 0.008) | number:'.1-2'}} KWh </span>
+        </li>
+      </ol>
+      <br>
+    </div>
+
+    <div class="col-xl-6">
+      <h6 class="h-25"> Prediction de l'appariel 192:</h6>
+      <br>
+      <ol class="list-group list-group-numbered">
+
+        <li class="list-group-item d-flex justify-content-between align-items-start"
+            *ngFor="let t of lisprediction192 ; let index = index">
+          <div class="ms-2 me-auto">
+            prediction de l'heure {{index + 1}} : {{t}} KWh
+          </div>
+          <span class="badge bg-primary rounded-pill">± {{ (t * 0.008) | number:'.1-2'}} KWh</span>
+        </li>
+      </ol>
+      <br>
+    </div>
+
+    <div class="col-xl-6">
+      <h6 class="h-25"> Prediction de l'appariel 243:</h6>
+      <br>
+      <ol class="list-group list-group-numbered">
+
+        <li class="list-group-item d-flex justify-content-between align-items-start"
+            *ngFor="let t of lisprediction243 ; let index = index">
+          <div class="ms-2 me-auto">
+            prediction de l'heure {{index + 1}} : {{t}} KWh
+          </div>
+          <span class="badge bg-primary rounded-pill">± {{ (t * 0.008) | number:'.1-2'}} KWh</span>
+        </li>
+      </ol>
+      <br>
+    </div>
+    <div class="col-xl-6">
+      <h6 class="h-25"> Prediction de l'appariel 246:</h6>
+      <br>
+      <ol class="list-group list-group-numbered">
+
+        <li class="list-group-item d-flex justify-content-between align-items-start"
+            *ngFor="let t of lisprediction246 ; let index = index">
+          <div class="ms-2 me-auto">
+            prediction de l'heure {{index + 1}} : {{t}} KWh
+          </div>
+          <span class="badge bg-primary rounded-pill">± {{ (t * 0.008) | number:'.1-2'}} KWh </span>
+        </li>
+      </ol>
+      <br>
+    </div>
+    <div class="col-xl-6">
+      <h6 class="h-25"> Prediction de l'appariel 253:</h6>
+      <br>
+      <ol class="list-group list-group-numbered">
+
+        <li class="list-group-item d-flex justify-content-between align-items-start"
+            *ngFor="let t of lisprediction253 ; let index = index">
+          <div class="ms-2 me-auto">
+            prediction de l'heure {{index + 1}} : {{t }} KWh
+          </div>
+          <span class="badge bg-primary rounded-pill">± {{ (t * 0.008) | number:'.1-2'}} KWh</span>
+        </li>
+      </ol>
+      <br>
+    </div>
+    <br>
+    <a [routerLink]="['/pages/factures']" class="btn btn-primary stretched-link" routerLinkActive="active">
+      Retour
+    </a>
+  </nb-card-body>
+</nb-card>
